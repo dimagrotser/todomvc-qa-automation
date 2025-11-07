@@ -5,9 +5,10 @@ QA Automation tests for TodoMVC using TypeScript and Playwright Home task implem
 
 Application Information
 
-· Application Name: TodoMVC - Application
-· URL: [https://todomvc.com/examples/preact/dist/](https://todomvc.com/examples/preact/dist/)
-· Type of Testing: Functional & End-to-End Testing
+ - Application Name: TodoMVC - Application
+ - URL:   
+   [https://todomvc.com/examples/preact/dist/](https://todomvc.com/examples/preact/dist/)
+ - Type of Testing: Functional & End-to-End Testing
 
 ---
 
@@ -27,18 +28,18 @@ Test Steps
  
 Expected Results
 
-· The task "Buy groceries" is the first item of the todo list
-· The task counter at the bottom updates to show "1 item left"
-· The input field clears and is ready for new input
-· The task shows with an empty checkbox, incomplete state
-· The footer section appears (in case it was previously hidden) 
+- The task "Buy groceries" is the first item of the todo list
+- The task counter at the bottom updates to show "1 item left"
+- The input field clears and is ready for new input
+- The task shows with an empty checkbox, incomplete state
+- The footer section appears (in case it was previously hidden) 
 
 Notes & Edge Cases
 
-· Test with empty input (should not create task)
-· Test with very long task descriptions
-· Test with special characters in task text
-· Check if the input field values persist after refreshing the page
+- Test with empty input (should not create task)
+- Test with very long task descriptions
+- Test with special characters in task text
+- Check if the input field values persist after refreshing the page
 
 ---  
 
@@ -58,19 +59,19 @@ Test Steps
 
 Expected Results
 
-· The task appears with strike-through text formatting
-· The checkbox shows a checkmark state (✓)
-• The task counter goes down to "0 items left."
-· The task shows up in the "Completed" filter view
-· The task disappears from the "Active" filter view
-· The "Clear completed" button becomes visible 
+- The task appears with strike-through text formatting
+- The checkbox shows a checkmark state (✓)
+- The task counter goes down to "0 items left."
+- The task shows up in the "Completed" filter view
+- The task disappears from the "Active" filter view
+- The "Clear completed" button becomes visible 
 
 Notes & Edge Cases
 
-· Test clearing a completed task returns it to active
-· Test with multiple tasks in different completion states
-· Verify counter accuracy across mixed states of tasks
-· Check persistence of completion state after page refresh 
+- Test clearing a completed task returns it to active
+- Test with multiple tasks in different completion states
+- Verify counter accuracy across mixed states of tasks
+- Check persistence of completion state after page refresh 
 
 ---  
 
@@ -90,19 +91,19 @@ Test Steps
 
 Expected Results  
 
-· The task is completely removed from the to-do list
-· The task counter updates to reflect the removal
-· The task does not appear in any filter view: All/Active/Completed
-• The Delete button appears only on hover, not always visible.
-· No error or console messages display when deleting
+- The task is completely removed from the to-do list
+- The task counter updates to reflect the removal
+- The task does not appear in any filter view: All/Active/Completed
+- The Delete button appears only on hover, not always visible.
+- No error or console messages display when deleting
 
 Notes & Edge Cases
 
-· Test deleting the only task on the list
-· Test deleting a completed task versus an active task
-· Check Delete button visibility conditions
-· Test rapid consecutive deletions
-· Verify the list behavior once all tasks have been deleted
+- Test deleting the only task on the list
+- Test deleting a completed task versus an active task
+- Check Delete button visibility conditions
+- Test rapid consecutive deletions
+- Verify the list behavior once all tasks have been deleted
 
 ---  
 
@@ -123,19 +124,19 @@ Test Steps
 
 Expected Results
   
-· All Filter: shows all 3 tasks
-· Active Filter: Shows only "Active Task 1" and "Active Task 2"
-· Completed Filter: Shows only "Complete Task"
-· Task counter always displays "2 items left" regardless of the view
-· Filter buttons maintain proper active state styling
-· State of task completion is kept when toggling filters
+- All Filter: shows all 3 tasks
+- Active Filter: Shows only "Active Task 1" and "Active Task 2"
+- Completed Filter: Shows only "Complete Task"
+- Task counter always displays "2 items left" regardless of the view
+- Filter buttons maintain proper active state styling
+- State of task completion is kept when toggling filters
 
 Notes & Edge Cases
 
-· Test filtering with empty states (no active/no completed tasks)
-· Verify URL updates with filter parameters (/#/active, /#/completed)
-· Test filter persistence after refreshing the page
-· Confirm filter behavior with mixed task states
-· Check filter responsiveness with large task lists
+- Test filtering with empty states (no active/no completed tasks)
+- Verify URL updates with filter parameters (/#/active, /#/completed)
+- Test filter persistence after refreshing the page
+- Confirm filter behavior with mixed task states
+- Check filter responsiveness with large task lists
   
 ---  
