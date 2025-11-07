@@ -6,8 +6,7 @@ QA Automation tests for TodoMVC using TypeScript and Playwright Home task implem
 Application Information
 
  - Application Name: TodoMVC - Application
- - URL:   
-   [https://todomvc.com/examples/preact/dist/](https://todomvc.com/examples/preact/dist/)
+ - URL: [https://todomvc.com/examples/preact/dist/](https://todomvc.com/examples/preact/dist/)
  - Type of Testing: Functional & End-to-End Testing
 
 ---
@@ -139,4 +138,122 @@ Notes & Edge Cases
 - Confirm filter behavior with mixed task states
 - Check filter responsiveness with large task lists
   
+---
+
+## Test Automation Implementation
+
+### Selected Scenarios for Automation:
+
+**Test Scenario 1:** Adding a New Task
+
+**Test Scenario 2:** Marking Task as Completed
+
+### Technology Stack:
+
+- **Language:** TypeScript
+- **Framework:** Playwright
+- **Pattern:** Page Object Model
+
+### Key Features:
+
+- Multi-browser testing (Chrome, Firefox, Safari)
+- HTML reporting
+- Parallel test execution
+- Type-safe selectors and assertions
+
+### File Structure:
+
+```
+todo-qa-automation-ts/
+├── tests/
+│   └── todomvc.spec.ts          # Test implementations
+├── pages/
+│   └── todo-page.ts             # Page Object Model
+├── playwright.config.ts          # Playwright configuration
+├── tsconfig.json                # TypeScript configuration
+├── package.json                 # Dependencies
+└── README.md                    # Setup and run instructions
+```
+
+### Test Coverage:
+
+✅ Adding single and multiple tasks
+
+✅ Completing tasks and verifying state changes
+
+✅ Task counter validation
+
+✅ Task text verification
+
+✅ Multi-browser compatibility
+
+---
+
+## Setup and Run Instructions
+
+### Prerequisites:
+
+- Node.js (v18 or higher)
+- pnpm package manager
+
+### Installation:
+
+1. Clone the repository:
+```bash
+git clone https://github.com/dimagrotser/todomvc-qa-automation.git
+cd todomvc-qa-automation
+```
+
+2. Install dependencies:
+```bash
+pnpm install
+```
+
+3. Install Playwright browsers:
+```bash
+npx playwright install
+```
+
+### Running Tests:
+
+**Run all tests in headless mode:**
+```bash
+pnpm test
+```
+
+**Run tests in headed mode (visible browser):**
+```bash
+pnpm run test:headed
+```
+
+**View test report:**
+```bash
+pnpm run test:report
+```
+
+### Additional Commands:
+
+**Run tests in a specific browser:**
+```bash
+npx playwright test --project=chromium
+npx playwright test --project=firefox
+npx playwright test --project=webkit
+```
+
+**Run tests in debug mode:**
+```bash
+npx playwright test --debug
+```
+
+**Run specific test file:**
+```bash
+npx playwright test tests/todomvc.spec.ts
+```
+
+### Test Reports:
+
+- HTML reports are automatically generated in the `playwright-report/` directory
+- Test results are stored in the `test-results/` directory
+- Open the report with `pnpm run test:report` to view detailed test execution results
+
 ---  
